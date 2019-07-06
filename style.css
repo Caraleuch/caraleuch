@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	min-height: 80vh;
+	margin-top: 5%;
+	margin-bottom: 5%;
+	background: url("clouds.png") bottom repeat-x, linear-gradient(to right, #F4E8C1, #709FB0);
+	background-size: auto 250px, auto;
+	font-family: "Lato";
+	font-size: 20px;
+	line-height: 1.8em;
+	color: #726A95;
+}
+
+header * {
+	font-weight: bold;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+nav a {
+	color: #351F39;
+	padding: 0.5em 2em;
+	text-align: center;
+	border-radius: 50px;
+	background-color:#726A95;
+	box-shadow: 0 10px 6px -6px #777;
+	text-decoration: none;
+}
+
+nav a:hover, nav a:active {
+	color:#726A95;
+	background-color: #F4E8C1;
+}
+
+a {
+	font-weight: bold;
+	color: #726A95;
+	margin: 0 0 1em 0;
+	text-decoration: underline #709FB0 dotted;
+}
+
+a:hover {
+	color: #709FB0;
+	text-decoration: underline #351F39 dotted;
+}
+
+h1 {
+	text-transform: uppercase;
+}
+
+.h1, .h2, .hr {
+	color: #351F39;
+}
+
+@media screen and (max-width: 600px) {
+	body {
+		font-size: 16px;
+		background: linear-gradient(to bottom right, #F4E8C1, #709FB0);
+	}
+
+	.balloon {
+		display: none;
+	}
+}
+
+@media (min-width: 1200px) {
+	.balloon {
+		position: relative;
+		width: 150px;
+		height: 150px;
+		background-image: url("balloon.png");
+		background-size: contain;
+		margin-left: -300px;
+		margin-bottom: -50px;
+		animation: balloon 30s linear 3s infinite alternate;
+	}
+}
+
+@keyframes balloon {
+	0% {left: 0; top: 0;}
+	25% {left: -10px; top: -200px;}
+	50% {left: 20px; top: -400px;}
+	75% {left: -20px; top: -600px;}
+	100% {left: 0px; top: -800px;}
+}
+
