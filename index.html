@@ -9,7 +9,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0 shrink-to-fit=no">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="style.css">
-  <script src="script.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </head>
 
 <body class="container">
@@ -17,33 +19,33 @@
     <header class="col-md-4 col-xs-12">
       <img src="myAvatar.png" alt="my avatar" class="img-responsive img-circle">
       <h1 class="h1">Sandra Czeszek</h1>
-      <p>Junior Developer</p>
+      <p>.Net Developer</p>
     </header>
 
     <div class="col-md-8 col-xs-12">
       <nav id="nav" class="nav nav-pills">
-        <a href="#about" onmousedown="showSection('about')" class="col-md-3 col-xs-12">About</a>
-        <a href="#skills" onmousedown="showSection('skills')" class="col-md-3 col-xs-12">Skills</a>
-        <a href="#courses" onmousedown="showSection('courses')" class="col-md-3 col-xs-12">Courses</a>
-        <a href="#projects" onmousedown="showSection('projects')" class="col-md-3 col-xs-12">Projects</a>
+        <a href="#about" data-toggle="tab" class="col-md-3 col-xs-12 active">About</a>
+        <a href="#skills" data-toggle="tab" class="col-md-3 col-xs-12">Skills</a>
+        <a href="#courses" data-toggle="tab" class="col-md-3 col-xs-12">Courses</a>
+        <a href="#projects" data-toggle="tab" class="col-md-3 col-xs-12">Projects</a>
       </nav>
 
-      <div id="sections" class="col-sx-12">
+      <div id="sections" class="tab-content">
 
-        <div id="about">
+        <div id="about" class="tab-pane active">
           <h2>About me</h2>
           <p>Hello, I'm <a href="https://www.linkedin.com/in/sandraczeszek/">Sandra</a>.</p>
           <p>I'm Polish girl living since 2 years in Izegem in Belgium. In my country I studied Dutch
             so coming here was my big dream. And I did it! Now of course I have another
             big goal: I'm doing everything to become the best software developer.</p>
-          <p>Most of the time I'm busy with C# but using all other technologies and
+          <p">Most of the time I'm busy with C# but using all other technologies and
             languages is likewise fun for me. Here you can find my
             <a href="https://github.com/caraleuch">programming</a> activities, courses and
             plans for the future - there is still so much to learn.
             And hey, you can always <a href="mailto:sandra_cz@vp.pl">write</a> to me!</p>
         </div>
 
-        <div id="skills">
+        <div id="skills" class="tab-pane">
           <h2>What I can</h2>
           <ul class="list-unstyled">
             <li>C#</li>
@@ -61,7 +63,7 @@
           </ul>
         </div>
 
-        <div id="courses">
+        <div id="courses" class="tab-pane">
           <h2>How I learn</h2>
           <div>
             <h3>
@@ -103,7 +105,7 @@
           </div>
         </div>
 
-        <div id="projects">
+        <div id="projects" class="tab-pane">
           <h2>What I make</h2>
           <p>I'm still working on it, sorry :)</p>
           Vector from  <a href="https://pngtree.com/freepng/wedding-pattern_2072453.html">Pngtree.com</a>

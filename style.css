@@ -9,7 +9,6 @@ body {
 	margin-top: 5%;
 	margin-bottom: 5%;
 	background: linear-gradient(to right, #F4E8C1, #709FB0);
-	background-size: auto;
 	font-family: "Lato";
 	font-size: 18px;
 	color: #726A95;
@@ -25,14 +24,12 @@ header * {
 nav a {
 	color: #351F39;
 	padding: 0.5em 2em;
-	text-align: center;
 	border-radius: 50px;
+	text-align: center;
 	background-color:#726A95;
-	box-shadow: 0 10px 6px -6px #777;
-	text-decoration: none;
 }
 
-nav a:hover, nav a:active {
+nav a:hover, nav a.active {
 	color:#726A95;
 	background-color: #F4E8C1;
 }
@@ -41,24 +38,31 @@ a {
 	font-weight: bold;
 	color: #726A95;
 	margin: 0 0 1em 0;
-	text-decoration: underline #709FB0 dotted;
 }
 
 a:hover {
 	color: #709FB0;
-	text-decoration: underline #351F39 dotted;
 }
 
-h1 {
+.h1 {
 	text-transform: uppercase;
+	color: #351F39;
 }
 
-.h1, .h2, .hr {
+h2, hr {
 	color: #351F39;
+	border-bottom: #351F39 1px solid;
 }
 
 #courses>.col-md-6, #courses>.col-md-12 {
 	padding: 0;
+}
+
+#skills li {
+	background: linear-gradient(to bottom right, rgba(160, 193, 184, 0.692), rgba(112, 159, 176, 0.829));
+	padding: 5px 5px;
+	margin-bottom: 3px;
+	border-left: 5px solid #726A95;
 }
 
 .clouds {
@@ -78,7 +82,7 @@ h1 {
 		background: linear-gradient(to bottom right, #F4E8C1, #709FB0);
 	}
 
-	.balloon {
+	.balloon, .clouds {
 		display: none;
 	}
 }
