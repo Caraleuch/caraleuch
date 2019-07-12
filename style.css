@@ -8,11 +8,10 @@ body {
 	min-height: 80vh;
 	margin-top: 5%;
 	margin-bottom: 5%;
-	background: url("clouds.png") bottom repeat-x, linear-gradient(to right, #F4E8C1, #709FB0);
-	background-size: auto 250px, auto;
+	background: linear-gradient(to right, #F4E8C1, #709FB0);
+	background-size: auto;
 	font-family: "Lato";
-	font-size: 20px;
-	line-height: 1.8em;
+	font-size: 18px;
 	color: #726A95;
 }
 
@@ -58,6 +57,17 @@ h1 {
 	color: #351F39;
 }
 
+.clouds {
+	position: fixed;
+	z-index: -1;
+	left: 0px;
+	bottom: 0px;
+	width: 100%;
+	height: 250px;
+	background: url("clouds.png") bottom repeat-x;
+	background-size: auto 250px;
+}
+
 @media screen and (max-width: 600px) {
 	body {
 		font-size: 16px;
@@ -71,22 +81,22 @@ h1 {
 
 @media (min-width: 1200px) {
 	.balloon {
-		position: relative;
+		position: absolute;
 		width: 150px;
 		height: 150px;
 		background-image: url("balloon.png");
 		background-size: contain;
-		margin-left: -300px;
-		margin-bottom: -50px;
-		animation: balloon 30s linear 3s infinite alternate;
+		left: 25px;
+		bottom: 0px;
+		animation: balloon 30s linear 1s infinite alternate;
 	}
 }
 
 @keyframes balloon {
-	0% {left: 0; top: 0;}
-	25% {left: -10px; top: -200px;}
-	50% {left: 20px; top: -400px;}
-	75% {left: -20px; top: -600px;}
-	100% {left: 0px; top: -800px;}
+	0% {left: 25px; bottom: 0px;}
+	25% {left: 0px; bottom: 200px;}
+	50% {left: 20px; bottom: 400px;}
+	75% {left: 10px; bottom: 600px;}
+	100% {left: 40px; bottom: 800px;}
 }
 
