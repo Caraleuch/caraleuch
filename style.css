@@ -57,6 +57,10 @@ h1 {
 	color: #351F39;
 }
 
+#courses>.col-md-6, #courses>.col-md-12 {
+	padding: 0;
+}
+
 .clouds {
 	position: fixed;
 	z-index: -1;
